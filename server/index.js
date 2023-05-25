@@ -105,7 +105,7 @@ app.get("/api/users/logout", auth, (req, res) => {
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" })
     .then((user) => {
       return res.status(200).send({
-        sucess: true,
+        success: true,
       });
     })
     .catch((err) => {
